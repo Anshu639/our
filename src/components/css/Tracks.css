@@ -1,0 +1,177 @@
+/* General Styles */
+.tracks {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+
+.tracks-header {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.tracks-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tracks-header p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.header-decor {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+}
+
+.bulb-icon {
+  width: 50px;
+  height: auto;
+}
+
+.arrow-decor {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}
+
+.arrow-icon {
+  width: 100px;
+  height: auto;
+}
+
+/* Course Cards Container */
+.course-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Individual Course Card */
+.course-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Course Image */
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Course Content */
+.course-content {
+  padding: 20px;
+}
+
+.course-category {
+  font-size: 0.9rem;
+  color: orange;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.course-content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Rating (Stars) */
+.course-rating {
+  margin-bottom: 10px;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: orange;
+}
+
+/* Course Metadata (Icons and Info) */
+.course-meta {
+  font-size: 12px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spacing between icon and text */
+}
+
+.meta-icon {
+  color: #777; /* Icon color */
+  font-size: 12px; /* Icon size */
+}
+
+.course-meta span:hover .meta-icon {
+  color: orange; /* Highlight icon on hover */
+}
+
+.course-meta span:hover {
+  color: orange; /* Highlight text on hover */
+}
+
+/* Course Footer (Price and Button) */
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.join-button {
+  background-color: #ff7426;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.join-button:hover {
+  background-color: #ff7a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 90%;
+  }
+}
