@@ -1,96 +1,100 @@
 /* Team Section Styles */
 .team-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fefaf5;
-  }
-  
-  .team-header h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .team-header p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 30px;
-  }
-  
-  /* Team Cards Grid */
-  .team-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .team-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .team-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .team-content {
-    padding: 20px;
-  }
-  
-  .team-content h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .team-title {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-  }
-  
-  .team-description {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .team-subject {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    margin-bottom: 15px;
-  }
-  
-  /* Social Icons */
-  .team-social {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .team-social a img {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-  
-  .team-social a img:hover {
-    transform: scale(1.1);
-  }
-  
+  padding: 50px 100px;
+  text-align: center;
+  background-color: #fefaf5;
+}
+
+.team-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.team-header p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Team Cards Grid */
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.team-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.team-content {
+  padding: 20px;
+}
+
+.team-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-title {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.team-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Align subject and social icons in the same line */
+.team-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-subject {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.team-social {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #777;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  color: orange;
+  transform: scale(1.1);
+}

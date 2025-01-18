@@ -61,7 +61,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
+      <hr></hr>
       {/* Bottom Footer */}
       <div className="footer-bottom">
         <p>BookStore All Right Reserved, 2022</p>

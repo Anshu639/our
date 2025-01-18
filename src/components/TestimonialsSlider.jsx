@@ -1,5 +1,4 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useState } from "react";
 import "./css/TestimonialsSlider.css";
 
 const testimonials = [
@@ -36,26 +35,12 @@ const testimonials = [
 ];
 
 const TestimonialsSlider = () => {
-  const settings = {
-    dots: true, // Show dots for navigation
-    infinite: true, // Loop through items
-    speed: 500, // Slide transition speed
-    slidesToShow: 3, // Number of cards visible
-    slidesToScroll: 1, // Number of cards to scroll per action
-    responsive: [
-      {
-        breakpoint: 1024, // Medium screens
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768, // Small screens
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const cardsToShow = 3; // Number of cards visible at once
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
   };
 
   return (
@@ -64,24 +49,44 @@ const TestimonialsSlider = () => {
         <h2>What Student's Say</h2>
         <p>Lorem Ipsum is simply dummy text of the printing.</p>
       </div>
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-card">
-            <p className="testimonial-text">"{testimonial.text}"</p>
-            <div className="testimonial-info">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="testimonial-image"
-              />
-              <div>
-                <h4>{testimonial.name}</h4>
-                <p>{testimonial.role}</p>
+
+      <div className="slider-container">
+        <div
+          className="slider-wrapper"
+          style={{
+            transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
+          }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-card">
+              <p className="testimonial-text">"{testimonial.text}"</p>
+              <div className="testimonial-info">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="testimonial-image"
+                />
+                <div>
+                  <h4>{testimonial.name}</h4>
+                  <p>{testimonial.role}</p>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="dots">
+        {Array.from({
+          length: testimonials.length - cardsToShow + 1,
+        }).map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${currentIndex === index ? "active" : ""}`}
+            onClick={() => goToSlide(index)}
+          ></span>
         ))}
-      </Slider>
+      </div>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./css/TeamSection.css";
 
 const teamMembers = [
@@ -7,7 +8,7 @@ const teamMembers = [
     title: "Professor @George Brown College",
     description: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
     subject: "Engineering physics",
-    image: "images/Teacher-1.png", // Replace with the actual image path
+    image: "images/Teacher-1.png",
     social: {
       instagram: "https://instagram.com",
       linkedin: "https://linkedin.com",
@@ -18,7 +19,7 @@ const teamMembers = [
     title: "Professor @George Brown College",
     description: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
     subject: "Engineering physics",
-    image: "images/Teacher-1.png", // Replace with the actual image path
+    image: "images/Teacher-1.png",
     social: {
       instagram: "https://instagram.com",
       linkedin: "https://linkedin.com",
@@ -29,7 +30,7 @@ const teamMembers = [
     title: "Professor @George Brown College",
     description: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
     subject: "Engineering physics",
-    image: "images/Teacher-1.png", // Replace with the actual image path
+    image: "images/Teacher-1.png",
     social: {
       instagram: "https://instagram.com",
       linkedin: "https://linkedin.com",
@@ -55,14 +56,27 @@ const TeamSection = () => {
               <h3>{member.name}</h3>
               <p className="team-title">{member.title}</p>
               <p className="team-description">{member.description}</p>
-              <p className="team-subject">{member.subject}</p>
-              <div className="team-social">
-                <a href={member.social.instagram} target="_blank" rel="noopener noreferrer">
-                  <img src="images/instagram-icon.png" alt="Instagram" />
-                </a>
-                <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
-                  <img src="images/linkedin-icon.png" alt="LinkedIn" />
-                </a>
+              {/* Footer with Subject and Social Icons */}
+              <div className="team-footer">
+                <p className="team-subject">{member.subject}</p>
+                <div className="team-social">
+                  <a
+                    href={member.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href={member.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                  >
+                    <FaLinkedin />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

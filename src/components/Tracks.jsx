@@ -47,7 +47,7 @@ const Tracks = () => {
           <img
             src="images/casual-life-3d-idea-lamp 1.png"
             alt="Light Bulb"
-            className="bulb-icon"
+            className="arrow-icon-tracks"
           />
         </div>
         <h2>Our Tracks</h2>
@@ -56,7 +56,7 @@ const Tracks = () => {
           <img
             src="images/arrow.png"
             alt="Arrow Decoration"
-            className="arrow-icon"
+            className="arrow-icon-tracks"
           />
         </div>
       </div>
